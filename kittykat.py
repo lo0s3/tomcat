@@ -7,7 +7,7 @@ from gevent.pool import Pool
 gevent.monkey.patch_socket()
 requests.packages.urllib3.disable_warnings()
 
-parser = argparse.ArgumentParser(description="Tomcat weak credential scanner. Requires file with credentials on seperate lines (ex: tomcat:s3cret, etc.) and hosts file (ip list).")
+parser = argparse.ArgumentParser(description="Tomcat Weak Credential Scanner")
 parser.add_argument('-c', dest='creds', required=True, metavar="{creds list}")
 parser.add_argument('-i', dest='hosts', required=True, metavar="{ip list}")
 parser.add_argument('-t', dest="threads", required=True, type=int, default=16, metavar="{thread count}")
